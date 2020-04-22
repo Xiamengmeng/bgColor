@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./divColor.css">
+</head>
+<body>
+    <div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+        <div class="squrt"></div>
+    </div>
+    <script>
+        const btn = document.querySelectorAll('.squrt');
+        console.log(btn)
+        function random(number) {
+        return Math.floor(Math.random()*number);
+        }
+
+        function bgChange(e) {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        e.target.style.backgroundColor = rndCol;
+        console.log(e);
+        }
+
+        // btn.addEventListener('click', bgChange);
+        for(var i=0;i<btn.length;i++){
+            btn[i].addEventListener('click', bgChange);
+        }
+    </script>
+</body>
+</html>
